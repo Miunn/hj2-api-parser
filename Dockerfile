@@ -26,7 +26,7 @@ COPY xsd-schemas/ ./xsd-schemas/
 RUN cargo build --release
 
 # Expose port 80
-EXPOSE 80
+EXPOSE 3443
 
 # Run the application
 CMD ["./target/release/hj2-api-xml-rust"]

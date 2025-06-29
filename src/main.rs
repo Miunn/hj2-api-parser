@@ -22,8 +22,8 @@ async fn main() {
         .route("/", get(api::index::handler))
         .route("/import", post(api::import::handler));
 
-    let listener = tokio::net::TcpListener::bind("0.0.0.0:80").await.unwrap();
+    let listener = tokio::net::TcpListener::bind("0.0.0.0:3443").await.unwrap();
 
-    info!(target: "main", "Server is running on port 80");
+    info!(target: "main", "Server is running on port 3443");
     axum::serve(listener, app).await.unwrap();
 }

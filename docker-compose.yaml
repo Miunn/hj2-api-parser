@@ -4,7 +4,7 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "3443:80"
+      - "3443:3443"
     container_name: hj2-api-xml-rust
     restart: unless-stopped
     environment:
